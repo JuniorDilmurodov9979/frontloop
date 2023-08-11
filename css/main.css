@@ -194,30 +194,47 @@ img {
     color: #ddd;
 }
 .chat__desc-wrapper {
-    width: 275px;
+    position: relative;
+    width: 268px;
     padding: 9px 10px 11px;
     border-radius: 1px;
     background-color: #e6edf6;
 }
-.chat__desc-wrapper--first-one {
+.chat__desc-wrapper--first-one::before {
+    position: absolute;
+    top: 0;
+    left: -6px;
+    content: "";
     display: inline-block;
-    border-top: 5px solid #e6edf6;
-    border-left: 5px solid white;
-    
+    border-top: 7px solid #e6edf6;
+    border-left: 7px solid transparent;
 }
 .chat__desc-wrapper--change {
     margin-top: 36px;
     margin-bottom: 36px;
     margin-left: auto;
-    border-top: 5px solid #e6edf6;
-    border-right: 5px solid white;
     
+}
+.chat__desc-wrapper--change::after{
+    position: absolute;
+    top: 0;
+    right: -6px;
+    content: "";
+    display: inline-block;
+    border-top: 7px solid #e6edf6;
+    border-right: 7px solid transparent;
 }
 .chat__desc-wrapper--mark {
     width: 89px;
-    border-top: 5px solid #e6edf6;
-    border-left: 5px solid white;
-    
+}
+.chat__desc-wrapper--mark::before {
+    position: absolute;
+    top: 0;
+    left: -6px;
+    content: "";
+    display: inline-block;
+    border-top: 7px solid #e6edf6;
+    border-left: 7px solid transparent;
 }
 .chat__desc-wrapper--last-one {  
     width: 193px;
